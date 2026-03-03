@@ -1,0 +1,257 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Contact Us | Anchor Valley"
+  description="Ready to move faster with less friction? Reach out to Anchor Valley and lets chart the smartest path forward for your business."
+  ogTitle="Contact Us | Anchor Valley"
+  ogDescription="Ready to move faster with less friction? Reach out to Anchor Valley and lets chart the smartest path forward for your business."
+  ogImage="https://cdn.prod.website-files.com/67eae1b7fc9051bcedb2f677/68260ff9baf64c77eb44cc78_OG-IMAGE.jpg"
+  canonical="https://www.anchorvalleygroup.com/contact-us"
+>
+  <div class="page-wrapper line-bg">
+    <div class="section_hero">
+      <div class="padding-global-2">
+        <div class="container-medium">
+          <div class="padding-section-medium" style="padding-bottom:0">
+            <h1 class="underlined align-center"><strong>Let&#x27;s chat!</strong></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="section_body-content">
+      <div class="padding-global-2">
+        <div class="container-medium">
+          <div class="padding-section-medium">
+            <div id="contact-success" style="display:none;background:#e8f5e9;border:1px solid #4caf50;border-radius:8px;padding:20px;text-align:center;margin-bottom:24px;">
+              <h3 style="color:#2e7d32;margin:0 0 8px">Message sent!</h3>
+              <p style="color:#333;margin:0">We'll get back to you within 24 hours.</p>
+            </div>
+            <div id="contact-error" style="display:none;background:#fbe9e7;border:1px solid #e53935;border-radius:8px;padding:20px;text-align:center;margin-bottom:24px;">
+              <p style="color:#c62828;margin:0" id="contact-error-msg">Something went wrong. Please try again.</p>
+            </div>
+            <form id="contact-form" style="display:grid;gap:20px;">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+                <div>
+                  <label for="cf-name" class="field-label-2">Name <span style="color:#d76424">*</span></label>
+                  <input type="text" id="cf-name" name="name" required class="text-field-2 w-input" placeholder="Your name" />
+                </div>
+                <div>
+                  <label for="cf-email" class="field-label-2">Email <span style="color:#d76424">*</span></label>
+                  <input type="email" id="cf-email" name="email" required class="text-field-2 w-input" placeholder="you@company.com" />
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+                <div>
+                  <label for="cf-phone" class="field-label-2">Phone</label>
+                  <input type="tel" id="cf-phone" name="phone" class="text-field-2 w-input" placeholder="(555) 123-4567" />
+                </div>
+                <div>
+                  <label for="cf-company" class="field-label-2">Company</label>
+                  <input type="text" id="cf-company" name="company" class="text-field-2 w-input" placeholder="Your company" />
+                </div>
+              </div>
+              <div>
+                <label for="cf-subject" class="field-label-2">Subject</label>
+                <input type="text" id="cf-subject" name="subject" class="text-field-2 w-input" placeholder="What's this about?" />
+              </div>
+              <div>
+                <label for="cf-message" class="field-label-2">Message <span style="color:#d76424">*</span></label>
+                <textarea id="cf-message" name="message" required class="text-field-2 w-input" rows="6" placeholder="Tell us what's on your mind..." style="resize:vertical;min-height:150px"></textarea>
+              </div>
+              <div style="text-align:center">
+                <button type="submit" class="button is-large w-button" id="cf-submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="section_body-content">
+      <div class="padding-global-2">
+        <div class="container-large">
+          <div class="padding-section-medium">
+            <h2 class="align-center">Need some additional answers?<br>We got you covered.</h2>
+            <div class="spacer-large"></div>
+            <div class="fs_accordion-1_component-2">
+              <div class="fs_accordion-1_item-2">
+                <div id="accordion-1-header-1" tabindex="0" role="button" aria-controls="accordion-1-content-1" aria-expanded="false" class="fs_accordion-1_header-2">
+                  <div class="fs_accordion-1_label-2"><strong>What kind of companies do you typically work with?</strong></div>
+                  <div class="fs_accordion-1_arrow-wrapper-2">
+                    <div class="fs_accordion-1_icon-2 w-icon-dropdown-toggle"></div>
+                  </div>
+                </div>
+                <div id="accordion-1-content-1" aria-labelledby="accordion-header-1" class="fs_accordion-1_content-2">
+                  <div class="fs_accordion-1_body-2">
+                    <p class="fs_accordion-1_paragraph-2">We work with growth-minded founders and small teams, especially those going through change, dealing with complexity, or preparing for a big move. Most of our clients are scaling, cleaning up operations, or getting ready for funding or an exit. If you're tired of doing things the hard way, you're in the right place.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="fs_accordion-1_item-2">
+                <div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header-2">
+                  <div class="fs_accordion-1_label-2"><strong>What happens after the discovery call?</strong></div>
+                  <div class="fs_accordion-1_arrow-wrapper-2">
+                    <div class="fs_accordion-1_icon-2 w-icon-dropdown-toggle"></div>
+                  </div>
+                </div>
+                <div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content-2">
+                  <div class="fs_accordion-1_body-2">
+                    <p class="fs_accordion-1_paragraph-2">We'll send over a quick summary of what we heard, where we'd focus, and how we might help. From there, you can decide if it makes sense to keep moving forward. No pressure, no fluff.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="fs_accordion-1_item-2">
+                <div id="accordion-1-header-3" tabindex="0" role="button" aria-controls="accordion-1-content-3" aria-expanded="false" class="fs_accordion-1_header-2">
+                  <div class="fs_accordion-1_label-2"><strong>Do I need to prepare anything ahead of time?</strong></div>
+                  <div class="fs_accordion-1_arrow-wrapper-2">
+                    <div class="fs_accordion-1_icon-2 w-icon-dropdown-toggle"></div>
+                  </div>
+                </div>
+                <div id="accordion-1-content-3" aria-labelledby="accordion-header-3" class="fs_accordion-1_content-2">
+                  <div class="fs_accordion-1_body-2">
+                    <p class="fs_accordion-1_paragraph-2">No prep required. Just show up ready to talk honestly about where things stand and what success would look like. If you have financials, org charts, or decks, feel free to bring them, but it's not necessary.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="fs_accordion-1_item-2">
+                <div id="accordion-1-header-4" tabindex="0" role="button" aria-controls="accordion-1-content-4" aria-expanded="false" class="fs_accordion-1_header-2">
+                  <div class="fs_accordion-1_label-2"><strong>What if I'm not totally sure what kind of help I need?</strong></div>
+                  <div class="fs_accordion-1_arrow-wrapper-2">
+                    <div class="fs_accordion-1_icon-2 w-icon-dropdown-toggle"></div>
+                  </div>
+                </div>
+                <div id="accordion-1-content-4" aria-labelledby="accordion-header-4" class="fs_accordion-1_content-2">
+                  <div class="fs_accordion-1_body-2">
+                    <p class="fs_accordion-1_paragraph-2">That's exactly what the call is for. We'll help you figure out what's really getting in the way and where to focus first. Even if we're not the right fit, you'll leave with more clarity.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="fs_accordion-1_item-2">
+                <div id="accordion-1-header-5" tabindex="0" role="button" aria-controls="accordion-1-content-5" aria-expanded="false" class="fs_accordion-1_header-2">
+                  <div class="fs_accordion-1_label-2"><strong>Is this call just a sales pitch?</strong></div>
+                  <div class="fs_accordion-1_arrow-wrapper-2">
+                    <div class="fs_accordion-1_icon-2 w-icon-dropdown-toggle"></div>
+                  </div>
+                </div>
+                <div id="accordion-1-content-5" aria-labelledby="accordion-header-5" class="fs_accordion-1_content-2">
+                  <div class="fs_accordion-1_body-2">
+                    <p class="fs_accordion-1_paragraph-2">Not at all. Think of it more like a strategy session. We'll give you straight answers and real insight. If we're a fit, great. If not, you'll still walk away with something useful.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style is:global>
+    /* Contact form — Stewardly-style inputs with AV colors */
+    #contact-form {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    #contact-form .text-field-2.w-input {
+      width: 100%;
+      padding: 1.1rem 1rem;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+      box-sizing: border-box;
+      background: #fff;
+    }
+    #contact-form textarea.text-field-2.w-input {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+      box-sizing: border-box;
+      background: #fff;
+    }
+    #contact-form .text-field-2.w-input:focus,
+    #contact-form textarea.text-field-2.w-input:focus {
+      outline: none;
+      border-color: #d76424;
+    }
+    #contact-form .field-label-2 {
+      display: block;
+      color: #060644;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
+    }
+    #contact-form .button.is-large.w-button {
+      background: #d76424;
+      color: #060644;
+      border: none;
+      padding: 0.85rem 2.5rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #contact-form .button.is-large.w-button:hover {
+      background: #c25a1f;
+    }
+    @media (max-width: 600px) {
+      #contact-form div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
+  <script>
+    document.getElementById('contact-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('cf-submit');
+      const form = e.target;
+      const successEl = document.getElementById('contact-success');
+      const errorEl = document.getElementById('contact-error');
+      const errorMsg = document.getElementById('contact-error-msg');
+
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      successEl.style.display = 'none';
+      errorEl.style.display = 'none';
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: form.name.value.trim(),
+            email: form.email.value.trim(),
+            phone: form.phone.value.trim() || undefined,
+            company: form.company.value.trim() || undefined,
+            subject: form.subject.value.trim() || undefined,
+            message: form.message.value.trim(),
+          }),
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          successEl.style.display = 'block';
+          form.style.display = 'none';
+        } else {
+          errorMsg.textContent = data.error || 'Something went wrong. Please try again.';
+          errorEl.style.display = 'block';
+          btn.textContent = 'Send Message';
+          btn.disabled = false;
+        }
+      } catch {
+        errorMsg.textContent = 'Network error. Please check your connection and try again.';
+        errorEl.style.display = 'block';
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+      }
+    });
+  </script>
+</Base>

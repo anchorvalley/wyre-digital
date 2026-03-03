@@ -1,0 +1,163 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Contact | Wyre Digital"
+  description="Get in touch with Wyre Digital."
+>
+  <div class="page-wrapper line-bg">
+    <div class="section_hero">
+      <div class="padding-global-2">
+        <div class="container-medium">
+          <div class="padding-section-medium" style="padding-bottom:0">
+            <h1 class="underlined align-center"><strong>Let's Talk.</strong></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="section_body-content">
+      <div class="padding-global-2">
+        <div class="container-medium">
+          <div class="padding-section-medium">
+            <div id="contact-success" style="display:none;background:#e8f5e9;border:1px solid #4caf50;border-radius:8px;padding:20px;text-align:center;margin-bottom:24px;">
+              <h3 style="color:#2e7d32;margin:0 0 8px">Message sent!</h3>
+              <p style="color:#333;margin:0">We'll get back to you within 24 hours.</p>
+            </div>
+            <div id="contact-error" style="display:none;background:#fbe9e7;border:1px solid #e53935;border-radius:8px;padding:20px;text-align:center;margin-bottom:24px;">
+              <p style="color:#c62828;margin:0" id="contact-error-msg">Something went wrong. Please try again.</p>
+            </div>
+            <form id="contact-form" style="display:grid;gap:20px;">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+                <div>
+                  <label for="cf-name" class="field-label-2">Name <span style="color:#d76424">*</span></label>
+                  <input type="text" id="cf-name" name="name" required class="text-field-2 w-input" placeholder="Your name" />
+                </div>
+                <div>
+                  <label for="cf-email" class="field-label-2">Email <span style="color:#d76424">*</span></label>
+                  <input type="email" id="cf-email" name="email" required class="text-field-2 w-input" placeholder="you@company.com" />
+                </div>
+              </div>
+              <div>
+                <label for="cf-company" class="field-label-2">Company</label>
+                <input type="text" id="cf-company" name="company" class="text-field-2 w-input" placeholder="Your company" />
+              </div>
+              <div>
+                <label for="cf-message" class="field-label-2">Message <span style="color:#d76424">*</span></label>
+                <textarea id="cf-message" name="message" required class="text-field-2 w-input" rows="6" placeholder="Tell us what's on your mind..." style="resize:vertical;min-height:150px"></textarea>
+              </div>
+              <div style="text-align:center">
+                <button type="submit" class="button is-large w-button" id="cf-submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style is:global>
+    /* Same styles as original */
+    #contact-form {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    #contact-form .text-field-2.w-input {
+      width: 100%;
+      padding: 1.1rem 1rem;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+      box-sizing: border-box;
+      background: #fff;
+    }
+    #contact-form textarea.text-field-2.w-input {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+      box-sizing: border-box;
+      background: #fff;
+    }
+    #contact-form .text-field-2.w-input:focus,
+    #contact-form textarea.text-field-2.w-input:focus {
+      outline: none;
+      border-color: #d76424;
+    }
+    #contact-form .field-label-2 {
+      display: block;
+      color: #060644;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
+    }
+    #contact-form .button.is-large.w-button {
+      background: #d76424;
+      color: #060644;
+      border: none;
+      padding: 0.85rem 2.5rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #contact-form .button.is-large.w-button:hover {
+      background: #c25a1f;
+    }
+    @media (max-width: 600px) {
+      #contact-form div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
+  <script>
+    // Same script as original, but update fetch URL if needed
+    document.getElementById('contact-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('cf-submit');
+      const form = e.target;
+      const successEl = document.getElementById('contact-success');
+      const errorEl = document.getElementById('contact-error');
+      const errorMsg = document.getElementById('contact-error-msg');
+
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      successEl.style.display = 'none';
+      errorEl.style.display = 'none';
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: form.name.value.trim(),
+            email: form.email.value.trim(),
+            company: form.company.value.trim() || undefined,
+            message: form.message.value.trim(),
+          }),
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          successEl.style.display = 'block';
+          form.style.display = 'none';
+        } else {
+          errorMsg.textContent = data.error || 'Something went wrong. Please try again.';
+          errorEl.style.display = 'block';
+          btn.textContent = 'Submit';
+          btn.disabled = false;
+        }
+      } catch {
+        errorMsg.textContent = 'Network error. Please check your connection and try again.';
+        errorEl.style.display = 'block';
+        btn.textContent = 'Submit';
+        btn.disabled = false;
+      }
+    });
+  </script>
+</Base>

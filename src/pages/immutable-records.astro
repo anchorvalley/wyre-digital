@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Immutable Records | Wyre Digital"
+  description="Tamper-proof records on the BSV blockchain."
+>
+  <div class="page-wrapper line-bg">
+    <div class="section_hero">
+      <div class="padding-global-2">
+        <div class="container-large">
+          <div class="features_content-wrapper">
+            <h1><strong>Tamper-Proof Records on the BSV Blockchain.</strong></h1>
+            <p>Secure your data with immutable anchoring.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section_body-content">
+      <div class="padding-global-2">
+        <div class="container-large">
+          <div class="padding-section-medium">
+            <h2>What It Is</h2>
+            <p>Immutable Records is a service that allows you to anchor data hashes to the BSV blockchain, ensuring tamper-proof storage and verifiability.</p>
+            <div class="spacer-medium"></div>
+            <h2>How It Works</h2>
+            <ul role="list">
+              <li class="underlined"><strong>Step 1:</strong> Compute the hash of your data.</li>
+              <li class="underlined"><strong>Step 2:</strong> Send the hash to our /anchor endpoint.</li>
+              <li class="underlined"><strong>Step 3:</strong> Verify the record using /verify.</li>
+            </ul>
+            <div class="spacer-medium"></div>
+            <h2>API Endpoints</h2>
+            <pre><code>curl -X POST https://api.wyre.digital/anchor -H "Content-Type: application/json" -d '{"hash": "your_data_hash"}'</code></pre>
+            <pre><code>curl -X GET https://api.wyre.digital/verify?hash=your_data_hash</code></pre>
+            <pre><code>curl -X POST https://api.wyre.digital/hash -H "Content-Type: application/json" -d '{"data": "your_data"}'</code></pre>
+            <div class="spacer-medium"></div>
+            <h2>Use Cases</h2>
+            <ul role="list">
+              <li class="underlined">Regulatory compliance</li>
+              <li class="underlined">Audit trails</li>
+              <li class="underlined">Legal documents</li>
+              <li class="underlined">Supply chain tracking</li>
+            </ul>
+            <div class="spacer-medium"></div>
+            <h2>n8n Integration</h2>
+            <p> Easily integrate with n8n workflows for automated anchoring and verification.</p>
+            <div class="spacer-medium"></div>
+            <a href="/contact" class="button is-large w-button">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>
