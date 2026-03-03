@@ -15,6 +15,10 @@ body {
     color: #1a1a1a;
     line-height: 1.6;
     font-size: 16px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
 .container {
