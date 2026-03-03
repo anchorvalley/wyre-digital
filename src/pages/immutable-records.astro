@@ -31,9 +31,9 @@ import Base from '../layouts/Base.astro';
             </ul>
             <div class="spacer-medium"></div>
             <h2>API Endpoints</h2>
-            <pre><code>curl -X POST https://api.wyre.digital/anchor -H "Content-Type: application/json" -d '{"hash": "your_data_hash"}'</code></pre>
-            <pre><code>curl -X GET https://api.wyre.digital/verify?hash=your_data_hash</code></pre>
-            <pre><code>curl -X POST https://api.wyre.digital/hash -H "Content-Type: application/json" -d '{"data": "your_data"}'</code></pre>
+            <pre><code>curl -X POST https://records.anchorvalley.us/anchor \<br />  -H "Content-Type: application/json" \<br />  -d '&#123;"recordType":"invoice","recordId":"inv-001","data":&#123;"amount":4200&#125;&#125;'</code></pre>
+            <pre><code>curl -X POST https://records.anchorvalley.us/verify \<br />  -H "Content-Type: application/json" \<br />  -d '&#123;"recordType":"invoice","recordId":"inv-001","data":&#123;...&#125;,"expectedHash":"abc123"&#125;'</code></pre>
+            <pre><code>curl -X POST https://records.anchorvalley.us/hash \<br />  -H "Content-Type: application/json" \<br />  -d '&#123;"recordType":"invoice","recordId":"inv-001","data":&#123;...&#125;&#125;'</code></pre>
             <div class="spacer-medium"></div>
             <h2>Use Cases</h2>
             <ul role="list">
