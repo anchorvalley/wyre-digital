@@ -1,34 +1,27 @@
-# WYRE — Sound Money, Built on BSV
+# Wyre Digital Homepage
 
-Marketing website for the WYRE stablecoin project. Built on BSV's enterprise-grade blockchain infrastructure.
+This is a static HTML/CSS website for Wyre Digital, built as a simple homepage showcasing the company's products and services.
 
-## Overview
+## Files
+- `index.html`: Main HTML file.
+- `style.css`: Stylesheet for the site.
+- `vercel.json`: Configuration for Vercel deployment.
+- `.gitignore`: Git ignore file.
 
-WYRE is a transparent, low-cost stablecoin designed for:
-- **1:1 fiat-backed** reserves with on-chain auditability
-- **Sub-cent transaction fees** via BSV blockchain
-- **1M+ TPS capable** through BSV Teranode architecture
-
-## Development
-
-This is a static site (HTML + CSS + JS). No build step required.
-
-```bash
-# Serve locally
-npx serve .
-```
+## Features
+- Responsive design for mobile and desktop.
+- Dark mode toggle.
+- Semantic HTML5.
+- Professional, confident copy.
 
 ## Deployment
+1. Install Vercel CLI if needed: `npm i -g vercel`.
+2. Run `vercel` in this directory to deploy.
+3. The site is configured for single-page app rewrites.
 
-Currently deployed on Vercel. Push to `main` to auto-deploy.
+For local development, open `index.html` in a browser.
 
-## Tech Stack
-
-- Pure HTML/CSS/JS (no framework)
-- Libre Baskerville + Inter typography
-- CSS custom properties design system
-- Light/dark mode support
-
-## Domain
-
-Target: wyre.digital
+## Notes
+- No JavaScript frameworks used.
+- Fonts loaded from Google Fonts.
+- Deploy target: Vercel static hosting.

@@ -1,4 +1,9 @@
-.DS_Store
-*.swp
-*~
-.env
+# Ignore Vercel build artifacts
+.vercel
+
+# Ignore node_modules (if any)
+node_modules
+
+# Ignore temporary files
+*.tmp
+*.log
