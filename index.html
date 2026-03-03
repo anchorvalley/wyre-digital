@@ -3,124 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wyre Digital</title>
+    <title>Wyre Digital - Financial Infrastructure Built on BSV</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Libre+Baskerville:wght@700&amp;display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Wyre Digital</div>
-            <ul>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#immutable-records">Immutable Records</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="dark-mode-toggle">
-                <label for="dark-mode">Dark Mode</label>
-                <input type="checkbox" id="dark-mode">
-            </div>
-        </nav>
+    <header class="nav">
+        <div class="container">
+            <a href="/" class="logo">Wyre Digital</a>
+            <nav>
+                <ul>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#immutable-records">Immutable Records</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="hero">
-            <h1>Building the Financial Infrastructure of Tomorrow on BSV</h1>
-            <p>At Wyre Digital, we are pioneering secure, scalable solutions that empower businesses to thrive in the digital economy with confidence and efficiency.</p>
-            <a href="#contact" class="cta">Get Started</a>
-        </section>
-
-        <section id="products">
-            <h2>Our Products</h2>
-            <div class="product-cards">
-                <div class="card">
-                    <h3>WYRE Stablecoin</h3>
-                    <p>WYRE is a robust stablecoin engineered on the BSV blockchain, designed for stability and seamless integration into your financial operations. Currently in concept phase—secure your spot on the waitlist for exclusive early access.</p>
-                    <span class="status coming-soon">Coming Soon</span>
-                    <a href="#contact" class="cta">Join Waitlist</a>
-                </div>
-                <div class="card">
-                    <h3>Immutable Records</h3>
-                    <p>Protect your critical business documents with Immutable Records, our live service that anchors SHA-256 hashes to the BSV blockchain, providing undeniable proof of authenticity and integrity.</p>
-                    <span class="status live">Live Now</span>
-                    <a href="#immutable-records" class="cta">Explore</a>
+        <section class="hero">
+            <div class="container">
+                <h1>The Financial Layer for Serious Business.</h1>
+                <p class="subtext">Wyre Digital builds robust financial infrastructure on the BSV blockchain, delivering stability, security, and scalability for enterprises that demand more.</p>
+                <div class="ctas">
+                    <a href="#early-access" class="button primary">Get Early Access</a>
+                    <a href="#immutable-records" class="button secondary">Learn About Immutable Records</a>
                 </div>
             </div>
         </section>
 
-        <section id="immutable-records">
-            <h2>How Immutable Records Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <h3>1. Hash</h3>
-                    <p>Compute a secure SHA-256 hash of your invoices, contracts, or purchase orders to create a unique digital fingerprint.</p>
+        <section id="products" class="products">
+            <div class="container">
+                <span class="chip">Our Products</span>
+                <h2>What We Build</h2>
+                <div class="product-cards">
+                    <div class="card">
+                        <h3>WYRE Stablecoin</h3>
+                        <p>A next-generation stablecoin on BSV, designed for seamless transactions and unmatched reliability. Currently in early stages—join the waitlist for priority access.</p>
+                        <a href="#early-access" class="button primary">Join Waitlist</a>
+                    </div>
+                    <div class="card">
+                        <h3>Immutable Records</h3>
+                        <p>Anchor your business records to the BSV blockchain with SHA-256 hashes for tamper-proof verification. Our live API ensures data integrity at scale.</p>
+                        <a href="https://records.anchorvalley.us" target="_blank" class="button primary">Explore API</a>
+                    </div>
                 </div>
-                <div class="step">
-                    <h3>2. Anchor</h3>
-                    <p>Submit the hash via our straightforward API to permanently anchor it on the BSV blockchain, ensuring tamper-proof storage.</p>
-                </div>
-                <div class="step">
-                    <h3>3. Verify</h3>
-                    <p>Easily retrieve and validate the anchored hash against the blockchain at any time for audits or compliance.</p>
-                </div>
-            </div>
-            <p>Integrate today with our API at <a href="https://records.anchorvalley.us">records.anchorvalley.us</a>.</p>
-        </section>
-
-        <section id="why-bsv">
-            <h2>Why Choose BSV?</h2>
-            <ul>
-                <li><strong>Speed:</strong> Lightning-fast transactions that keep pace with your business needs.</li>
-                <li><strong>Cost:</strong> Minimal fees, often just fractions of a cent, for economical operations.</li>
-                <li><strong>Scale:</strong> Handles massive volumes without compromising performance.</li>
-                <li><strong>Immutability:</strong> Data once anchored is unalterable, providing ultimate security.</li>
-            </ul>
-        </section>
-
-        <section id="about">
-            <h2>About Wyre Digital</h2>
-            <p>Wyre Digital is a forward-thinking company committed to harnessing the power of BSV blockchain to deliver innovative financial tools. Our founder-led team combines deep expertise with a data-driven approach to solve real-world challenges.</p>
-            <div class="chips">
-                <span>Founder-Led</span>
-                <span>Data-Driven</span>
-            </div>
-            <div class="testimonial">
-                <p>"Immutable Records has given us peace of mind knowing our documents are securely anchored and verifiable at any time."</p>
-                <cite>— Industry Leader, Tech Corp</cite>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Reach out for early access to WYRE, integration support for Immutable Records, or any inquiries. We're here to help you build on BSV.</p>
-            <form action="mailto:info@wyre.digital" method="post" enctype="text/plain">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your email address" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your message" required></textarea>
-                <button type="submit" class="cta">Send Message</button>
-            </form>
+        <section id="immutable-records" class="how-it-works">
+            <div class="container">
+                <span class="chip">Immutable Records</span>
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="icon">🔒</div>
+                        <h4>Hash</h4>
+                        <p>Generate a SHA-256 hash of your document or data for a unique digital fingerprint.</p>
+                    </div>
+                    <div class="step">
+                        <div class="icon">⚓</div>
+                        <h4>Anchor</h4>
+                        <p>Embed the hash into the BSV blockchain, creating an immutable timestamped record.</p>
+                    </div>
+                    <div class="step">
+                        <div class="icon">✅</div>
+                        <h4>Verify</h4>
+                        <p>Easily confirm the authenticity of your records anytime with our verification tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-bsv">
+            <div class="container">
+                <span class="chip">Technology</span>
+                <h2>Why BSV?</h2>
+                <ul class="features">
+                    <li><span class="icon">⚡</span> Blazing speed for high-volume transactions</li>
+                    <li><span class="icon">💰</span> Ultra-low costs, making it feasible for enterprise use</li>
+                    <li><span class="icon">📈</span> Unlimited scalability without compromising security</li>
+                    <li><span class="icon">🔐</span> True immutability for data you can trust forever</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="early-access" class="cta">
+            <div class="container">
+                <h2>Join the Wyre Waitlist</h2>
+                <p>Be among the first to access our BSV stablecoin and shape the future of financial infrastructure.</p>
+                <form class="email-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="button primary">Sign Up</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Wyre Digital 2026. All rights reserved.</p>
-        <ul>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#immutable-records">Immutable Records</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="container">
+            <p>© 2026 Wyre Digital. All rights reserved.</p>
+        </div>
     </footer>
-
-    <script>
-        const toggle = document.getElementById('dark-mode');
-        toggle.addEventListener('change', () => {
-            document.body.classList.toggle('dark', toggle.checked);
-        });
-    </script>
 </body>
 </html>
