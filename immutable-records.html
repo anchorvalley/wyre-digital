@@ -28,14 +28,14 @@
         <section class="hero">
             <div class="container">
                 <h1>Tamper-Proof Records on the BSV Blockchain.</h1>
-                <p class="subtext">Secure your business data with immutable anchoring for compliance, audits, and trust.</p>
+                <p class="subtext">Secure your data with immutable anchoring for unparalleled integrity and verifiability.</p>
             </div>
         </section>
 
-        <section class="what-it-is">
+        <section class="products">
             <div class="container">
-                <h2>What It Is</h2>
-                <p>Immutable Records is a service that lets you hash your business records—like invoices, contracts, and purchase orders—using SHA-256, anchor them to the BSV blockchain, and store the transaction ID in Supabase for easy retrieval and verification.</p>
+                <h2>What is Immutable Records?</h2>
+                <p>Immutable Records is a service that allows you to anchor SHA-256 hashes of your documents and data to the BSV blockchain, creating tamper-proof records that can be verified anytime.</p>
             </div>
         </section>
 
@@ -46,63 +46,74 @@
                     <div class="step">
                         <div class="icon">🔒</div>
                         <h4>Hash</h4>
-                        <p>Generate a secure SHA-256 hash of your document or data.</p>
+                        <p>Generate a SHA-256 hash of your document or data.</p>
                     </div>
                     <div class="step">
                         <div class="icon">⚓</div>
                         <h4>Anchor</h4>
-                        <p>Embed the hash into a BSV transaction for permanent, timestamped proof.</p>
+                        <p>Submit the hash to our API to anchor it on the BSV blockchain.</p>
                     </div>
                     <div class="step">
                         <div class="icon">✅</div>
                         <h4>Verify</h4>
-                        <p>Confirm the record's integrity anytime using the stored txid.</p>
+                        <p>Use our tools to confirm the record's integrity at any time.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="api-endpoints">
+        <section class="products">
             <div class="container">
                 <h2>API Endpoints</h2>
-                <div class="endpoint">
-                    <h4>/anchor</h4>
-                    <pre><code>POST /anchor { "hash": "your-sha256-hash" } → { "txid": "bsv-txid" }</code></pre>
-                </div>
-                <div class="endpoint">
-                    <h4>/verify</h4>
-                    <pre><code>GET /verify?txid=bsv-txid → { "verified": true, "timestamp": "..." }</code></pre>
-                </div>
-                <div class="endpoint">
-                    <h4>/hash</h4>
-                    <pre><code>POST /hash { "data": "your-data" } → { "hash": "sha256-hash" }</code></pre>
-                </div>
+                <h3>/anchor</h3>
+                <pre><code>curl -X POST https://api.wyredigital.com/anchor \
+  -H "Content-Type: application/json" \
+  -d '{"hash": "your-sha256-hash"}'</code></pre>
+
+                <h3>/verify</h3>
+                <pre><code>curl https://api.wyredigital.com/verify?hash=your-sha256-hash</code></pre>
+
+                <h3>/hash</h3>
+                <pre><code>curl -X POST https://api.wyredigital.com/hash \
+  -H "Content-Type: application/json" \
+  -d '{"data": "your-data-string"}'</code></pre>
             </div>
         </section>
 
-        <section class="use-cases">
+        <section class="products">
             <div class="container">
                 <h2>Use Cases</h2>
-                <ul class="features">
-                    <li><span class="icon">📄</span> Invoicing — Prove invoice authenticity</li>
-                    <li><span class="icon">📝</span> Contracts — Ensure tamper-proof agreements</li>
-                    <li><span class="icon">🛡️</span> Compliance — Meet regulatory requirements</li>
-                    <li><span class="icon">📊</span> Audit Trails — Build verifiable histories</li>
-                </ul>
+                <div class="use-cases">
+                    <div class="use-case">
+                        <h4>Invoicing</h4>
+                        <p>Ensure invoices are tamper-proof for financial audits.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>Contracts</h4>
+                        <p>Anchor legal agreements for verifiable authenticity.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>Compliance</h4>
+                        <p>Meet regulatory requirements with immutable records.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>Audit Trails</h4>
+                        <p>Create verifiable logs for business processes.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="integration">
+        <section class="products">
             <div class="container">
                 <h2>n8n Integration</h2>
-                <p>Easily integrate Immutable Records into your workflows with our n8n nodes for hashing, anchoring, and verification.</p>
+                <p>Easily integrate Immutable Records into your workflows with our n8n nodes. Automate anchoring and verification in your existing automation setups.</p>
             </div>
         </section>
 
-        <section class="cta">
+        <section class="cta-form">
             <div class="container">
-                <h2>Get API Access</h2>
-                <a href="contact.html" class="button primary">Contact Us</a>
+                <a href="contact.html" class="button primary">Get API Access</a>
             </div>
         </section>
     </main>
