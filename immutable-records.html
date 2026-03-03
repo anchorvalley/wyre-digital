@@ -1,0 +1,134 @@
+<![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immutable Records - Wyre Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="nav">
+        <div class="container">
+            <a href="/" class="logo">Wyre Digital</a>
+            <nav>
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="immutable-records.html">Immutable Records</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="button primary cta-button">Get Early Access</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Tamper-Proof Records on the BSV Blockchain.</h1>
+                <p class="subtext">Secure your business data with immutable anchoring for compliance, audits, and trust.</p>
+            </div>
+        </section>
+
+        <section class="what-it-is">
+            <div class="container">
+                <h2>What It Is</h2>
+                <p>Immutable Records is a service that lets you hash your business records—like invoices, contracts, and purchase orders—using SHA-256, anchor them to the BSV blockchain, and store the transaction ID in Supabase for easy retrieval and verification.</p>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="icon">🔒</div>
+                        <h4>Hash</h4>
+                        <p>Generate a secure SHA-256 hash of your document or data.</p>
+                    </div>
+                    <div class="step">
+                        <div class="icon">⚓</div>
+                        <h4>Anchor</h4>
+                        <p>Embed the hash into a BSV transaction for permanent, timestamped proof.</p>
+                    </div>
+                    <div class="step">
+                        <div class="icon">✅</div>
+                        <h4>Verify</h4>
+                        <p>Confirm the record's integrity anytime using the stored txid.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="api-endpoints">
+            <div class="container">
+                <h2>API Endpoints</h2>
+                <div class="endpoint">
+                    <h4>/anchor</h4>
+                    <pre><code>POST /anchor { "hash": "your-sha256-hash" } → { "txid": "bsv-txid" }</code></pre>
+                </div>
+                <div class="endpoint">
+                    <h4>/verify</h4>
+                    <pre><code>GET /verify?txid=bsv-txid → { "verified": true, "timestamp": "..." }</code></pre>
+                </div>
+                <div class="endpoint">
+                    <h4>/hash</h4>
+                    <pre><code>POST /hash { "data": "your-data" } → { "hash": "sha256-hash" }</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="use-cases">
+            <div class="container">
+                <h2>Use Cases</h2>
+                <ul class="features">
+                    <li><span class="icon">📄</span> Invoicing — Prove invoice authenticity</li>
+                    <li><span class="icon">📝</span> Contracts — Ensure tamper-proof agreements</li>
+                    <li><span class="icon">🛡️</span> Compliance — Meet regulatory requirements</li>
+                    <li><span class="icon">📊</span> Audit Trails — Build verifiable histories</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="integration">
+            <div class="container">
+                <h2>n8n Integration</h2>
+                <p>Easily integrate Immutable Records into your workflows with our n8n nodes for hashing, anchoring, and verification.</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Get API Access</h2>
+                <a href="contact.html" class="button primary">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <a href="/" class="logo">Wyre Digital</a>
+                <p>Financial infrastructure built on BSV.</p>
+                <p class="copyright">©2026 Wyre Digital. All rights reserved.</p>
+            </div>
+            <div class="footer-middle">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="products.html#wyre">WYRE</a></li>
+                    <li><a href="immutable-records.html">Immutable Records</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>]]>
